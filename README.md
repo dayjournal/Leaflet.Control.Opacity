@@ -170,12 +170,12 @@ npm install leaflet.control.opacity
 main.js
 ```javascript
 
-// CSS一式を読み込んでパッケージ
+// CSS import
 import "leaflet/dist/leaflet.css";
 import "leaflet.control.opacity/dist/L.Control.Opacity.css";
 import "./css/style.css";
 
-// JS一式を読み込んでパッケージ
+// JS import
 import 'leaflet.control.opacity';
 import './js/script.js';
 
@@ -435,12 +435,12 @@ npm install leaflet.control.opacity
 main.js
 ```javascript
 
-// CSS一式を読み込んでパッケージ
+// CSS import
 import "leaflet/dist/leaflet.css";
 import "leaflet.control.opacity/dist/L.Control.Opacity.css";
 import "./css/style.css";
 
-// JS一式を読み込んでパッケージ
+// JS import
 import 'leaflet.control.opacity';
 import './js/script.js';
 
