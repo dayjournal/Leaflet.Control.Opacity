@@ -1,6 +1,8 @@
 # Leaflet.Control.Opacity 
 
 Leaflet.Control.Opacity is a Leaflet plugin that makes multiple tile layers transparent. (Leaflet v1.x.x)  
+[Leaflet Plugins](https://leafletjs.com/plugins.html#tileimage-display)  
+[npm](https://www.npmjs.com/package/leaflet.control.opacity)  
 
 <br>
 
@@ -266,6 +268,8 @@ Copyright (c) 2018 Yasunori Kirimoto
 # Leaflet.Control.Opacity 
 
 Leaflet.Control.Opacityは、複数のタイルレイヤーを透過するLeafletのプラグインです。 (Leaflet v1.x.x)  
+[Leaflet Plugins](https://leafletjs.com/plugins.html#tileimage-display)  
+[npm](https://www.npmjs.com/package/leaflet.control.opacity)  
 
 <br>
 
