@@ -30,3 +30,8 @@ input[type="range"]::-ms-thumb {
     border: 0;
     background-image: linear-gradient(to bottom, #1253A4 0, #1253A4 100%);
 }
+
+/* 題名レイアウト */
+.leaflet-control-layers-label {
+    margin: 0px 0px 8px 1px
+}

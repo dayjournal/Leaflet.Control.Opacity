@@ -36,7 +36,7 @@ collapsed: false or true
 //The position of the control (one of the map corners).
 position: 'topleft' or 'topright' or 'bottomleft' or 'bottomright'
 
-//Optional label to present before the controls (e.g. "Layers Opacity")
+//Label display of title (e.g. "Layers Opacity")
 label: string or null
 
 ```
@@ -153,7 +153,10 @@ L.control.layers(
 
 //OpacityControl
 L.control.opacity(
-    Map_AddLayer
+    Map_AddLayer,
+    {
+    label: "Layers Opacity"
+    }
 ).addTo(map);
 
 ```
@@ -246,7 +249,10 @@ L.control.layers(
 
 //OpacityControl
 L.control.opacity(
-    Map_AddLayer
+    Map_AddLayer,
+    {
+    label: "Layers Opacity"
+    }
 ).addTo(map);
 
 ```
@@ -305,6 +311,9 @@ collapsed: false or true
 
 //コントロールの配置設定。(デフォルト:右上配置)
 position: 'topleft' or 'topright' or 'bottomleft' or 'bottomright'
+
+//タイトルのラベル表示（例:Layers Opacity）
+label: string or null
 
 ```
 
@@ -420,7 +429,10 @@ L.control.layers(
 
 //OpacityControl
 L.control.opacity(
-    Map_AddLayer
+    Map_AddLayer,
+    {
+    label: "Layers Opacity"
+    }
 ).addTo(map);
 
 ```
@@ -513,7 +525,10 @@ L.control.layers(
 
 //OpacityControl
 L.control.opacity(
-    Map_AddLayer
+    Map_AddLayer,
+    {
+    label: "Layers Opacity"
+    }
 ).addTo(map);
 
 ```

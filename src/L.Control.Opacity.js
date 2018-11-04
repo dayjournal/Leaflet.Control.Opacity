@@ -43,9 +43,9 @@ L.Control.Opacity = L.Control.extend({
 		L.DomEvent.disableClickPropagation(container);
 		L.DomEvent.disableScrollPropagation(container);
 		if(this.options.label){
-			var labelSpan = L.DomUtil.create('span', className + "-label");
-			labelSpan.innerHTML = this.options.label;
-			container.appendChild(labelSpan);
+			var labelP = L.DomUtil.create('p', className + "-label");
+			labelP.innerHTML = this.options.label;
+			container.appendChild(labelP);
 		}
 		var form = this._form = L.DomUtil.create('form', className + '-list');
 		if (collapsed) {
