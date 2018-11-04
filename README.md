@@ -36,6 +36,9 @@ collapsed: false or true
 //The position of the control (one of the map corners).
 position: 'topleft' or 'topright' or 'bottomleft' or 'bottomright'
 
+//Optional label to present before the controls (e.g. "Layers Opacity")
+label: string or null
+
 ```
 
 <br>

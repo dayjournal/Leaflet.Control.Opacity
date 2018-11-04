@@ -1,7 +1,8 @@
 L.Control.Opacity = L.Control.extend({
 	options: {
 		collapsed: false,
-		position: 'topright'
+		position: 'topright',
+		label: null
 	},
 	initialize: function (overlays, options) {
 		L.Util.setOptions(this, options);
@@ -41,6 +42,11 @@ L.Control.Opacity = L.Control.extend({
 		container.setAttribute('aria-haspopup', true);
 		L.DomEvent.disableClickPropagation(container);
 		L.DomEvent.disableScrollPropagation(container);
+		if(this.options.label){
+			var labelSpan = L.DomUtil.create('span', className + "-label");
+			labelSpan.innerHTML = this.options.label;
+			container.appendChild(labelSpan);
+		}
 		var form = this._form = L.DomUtil.create('form', className + '-list');
 		if (collapsed) {
 			this._map.on('click', this.collapse, this);
