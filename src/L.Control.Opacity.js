@@ -10,7 +10,7 @@ L.Control.Opacity = L.Control.extend({
 		this._layers = [];
 		this._lastZIndex = 0;
 		this._handlingClick = false;
-		for (i in overlays) {
+		for (var i in overlays) {
 			this._addLayer(overlays[i], i, true);
 		}
 	},
