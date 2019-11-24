@@ -29,7 +29,6 @@ Browser Support
 ### Option  
 
 ```javascript
-
 //If true, the control will be collapsed into an icon and expanded on mouse hover or touch.
 collapsed: false or true
 
@@ -38,7 +37,6 @@ position: 'topleft' or 'topright' or 'bottomleft' or 'bottomright'
 
 //Label display of title (e.g. "Layers Opacity")
 label: string or null
-
 ```
 
 <br>
@@ -49,7 +47,6 @@ label: string or null
 
 index.html
 ```html
-
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -73,12 +70,10 @@ index.html
 
 </body>
 </html>
-
 ```
 
 stylesheet.css
 ```css
-
 html, body {
     height: 100%;
     padding: 0;
@@ -89,13 +84,10 @@ html, body {
     z-index: 0;
     height: 100%;
 }
-
 ```
 
 script.js
 ```javascript
-
-
 //MIERUNE Color
 var m_color = new L.tileLayer("https://tile.mierune.co.jp/mierune/{z}/{x}/{y}.png", {
     attribution: "Maptiles by <a href='http://mierune.co.jp/' target='_blank'>MIERUNE</a>, under CC BY. Data by <a href='http://osm.org/copyright' target='_blank'>OpenStreetMap</a> contributors, under ODbL."
@@ -158,7 +150,6 @@ L.control.opacity(
     label: "Layers Opacity"
     }
 ).addTo(map);
-
 ```
 
 <br>
@@ -170,14 +161,11 @@ Start Leaflet easily. [Leaflet v1.x.x, webpack]
 
 Install package
 ```bash
-
 npm install leaflet.control.opacity
-
 ```
 
 main.js
 ```javascript
-
 // CSS import
 import "leaflet/dist/leaflet.css";
 import "leaflet.control.opacity/dist/L.Control.Opacity.css";
@@ -186,12 +174,10 @@ import "./css/style.css";
 // JS import
 import 'leaflet.control.opacity';
 import './js/script.js';
-
 ```
 
 script.js
 ```javascript
-
 //MIERUNE Color
 var m_color = new L.tileLayer("https://tile.mierune.co.jp/mierune/{z}/{x}/{y}.png", {
     attribution: "Maptiles by <a href='http://mierune.co.jp/' target='_blank'>MIERUNE</a>, under CC BY. Data by <a href='http://osm.org/copyright' target='_blank'>OpenStreetMap</a> contributors, under ODbL."
@@ -254,7 +240,6 @@ L.control.opacity(
     label: "Layers Opacity"
     }
 ).addTo(map);
-
 ```
 
 <br>
@@ -262,7 +247,7 @@ L.control.opacity(
 ## License
 MIT
 
-Copyright (c) 2018 Yasunori Kirimoto
+Copyright (c) 2019 Yasunori Kirimoto
 
 <br>
 
@@ -305,7 +290,6 @@ Leaflet.Control.Opacityは、複数のタイルレイヤーを透過するLeafle
 ### オプション  
 
 ```javascript
-
 //コントロールの折りたたみ設定。(デフォルト:折りたたみ無し)
 collapsed: false or true
 
@@ -314,7 +298,6 @@ position: 'topleft' or 'topright' or 'bottomleft' or 'bottomright'
 
 //タイトルのラベル表示（例:Layers Opacity）
 label: string or null
-
 ```
 
 <br>
@@ -325,7 +308,6 @@ label: string or null
 
 index.html
 ```html
-
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -349,12 +331,10 @@ index.html
 
 </body>
 </html>
-
 ```
 
 stylesheet.css
 ```css
-
 html, body {
     height: 100%;
     padding: 0;
@@ -365,13 +345,10 @@ html, body {
     z-index: 0;
     height: 100%;
 }
-
 ```
 
 script.js
 ```javascript
-
-
 //MIERUNE Color
 var m_color = new L.tileLayer("https://tile.mierune.co.jp/mierune/{z}/{x}/{y}.png", {
     attribution: "Maptiles by <a href='http://mierune.co.jp/' target='_blank'>MIERUNE</a>, under CC BY. Data by <a href='http://osm.org/copyright' target='_blank'>OpenStreetMap</a> contributors, under ODbL."
@@ -434,26 +411,22 @@ L.control.opacity(
     label: "Layers Opacity"
     }
 ).addTo(map);
-
 ```
 
 <br>
 
-### Example - npm
+### 例 - npm
 
-Start Leaflet easily. [Leaflet v1.x.x, webpack]  
+Leafletを手軽に始める [Leaflet v1.x.x, webpack]  
 [leaflet-starter](https://github.com/dayjournal/leaflet-starter) 
 
-Install package
+パッケージインストール
 ```bash
-
 npm install leaflet.control.opacity
-
 ```
 
 main.js
 ```javascript
-
 // CSS import
 import "leaflet/dist/leaflet.css";
 import "leaflet.control.opacity/dist/L.Control.Opacity.css";
@@ -462,12 +435,10 @@ import "./css/style.css";
 // JS import
 import 'leaflet.control.opacity';
 import './js/script.js';
-
 ```
 
 script.js
 ```javascript
-
 //MIERUNE Color
 var m_color = new L.tileLayer("https://tile.mierune.co.jp/mierune/{z}/{x}/{y}.png", {
     attribution: "Maptiles by <a href='http://mierune.co.jp/' target='_blank'>MIERUNE</a>, under CC BY. Data by <a href='http://osm.org/copyright' target='_blank'>OpenStreetMap</a> contributors, under ODbL."
@@ -530,7 +501,6 @@ L.control.opacity(
     label: "Layers Opacity"
     }
 ).addTo(map);
-
 ```
 
 <br>
@@ -538,6 +508,6 @@ L.control.opacity(
 ## ライセンス
 MIT
 
-Copyright (c) 2018 Yasunori Kirimoto
+Copyright (c) 2019 Yasunori Kirimoto
 
 <br>
