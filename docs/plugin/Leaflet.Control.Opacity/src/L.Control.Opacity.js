@@ -10,7 +10,7 @@ L.Control.Opacity = L.Control.extend({
 		this._layers = [];
 		this._lastZIndex = 0;
 		this._handlingClick = false;
-		for (i in overlays) {
+		for (var i in overlays) {
 			this._addLayer(overlays[i], i, true);
 		}
 	},
@@ -124,6 +124,7 @@ L.Control.Opacity = L.Control.extend({
 		this._layerControlInputs.push(input);
 		input.layerId = L.Util.stamp(obj.layer);
 		L.DomEvent.on(input, 'click', this._onInputClick, this);
+		L.DomEvent.on(input, 'touchend', this._onInputClick, this);
 		var name = document.createElement('span');
 		name.innerHTML = ' ' + obj.name;
 		var holder = document.createElement('div');
