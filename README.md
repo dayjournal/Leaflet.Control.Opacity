@@ -10,7 +10,6 @@ Browser Support
 - Chrome
 - Firefox
 - Safari
-- IE 11
 
 <br>
 
@@ -54,8 +53,8 @@ index.html
     <meta charset="UTF-8">
     <title>Leaflet.Control.Opacity example</title>
 
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
-    <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" rel="stylesheet"/>
 
     <script src="plugin/Leaflet.Control.Opacity/dist/L.Control.Opacity.js"></script>
     <link href="plugin/Leaflet.Control.Opacity/dist/L.Control.Opacity.css" rel="stylesheet" />
@@ -247,7 +246,7 @@ L.control.opacity(
 ## License
 MIT
 
-Copyright (c) 2019 Yasunori Kirimoto
+Copyright (c) 2018-2021 Yasunori Kirimoto
 
 <br>
 
@@ -271,7 +270,6 @@ Leaflet.Control.Opacityは、複数のタイルレイヤーを透過するLeafle
 - Chrome
 - Firefox
 - Safari
-- IE 11
 
 <br>
 
@@ -315,8 +313,8 @@ index.html
     <meta charset="UTF-8">
     <title>Leaflet.Control.Opacity example</title>
 
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
-    <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" rel="stylesheet"/>
 
     <script src="plugin/Leaflet.Control.Opacity/dist/L.Control.Opacity.js"></script>
     <link href="plugin/Leaflet.Control.Opacity/dist/L.Control.Opacity.css" rel="stylesheet" />
@@ -508,6 +506,6 @@ L.control.opacity(
 ## ライセンス
 MIT
 
-Copyright (c) 2019 Yasunori Kirimoto
+Copyright (c) 2018-2021 Yasunori Kirimoto
 
 <br>
