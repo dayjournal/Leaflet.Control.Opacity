@@ -49,7 +49,7 @@ L.Control.Opacity = L.Control.extend({
 		}
 		var form = this._form = L.DomUtil.create('form', className + '-list');
 		if (collapsed) {
-			this._map.on('click', this.collapse, this);
+			this._map.on('click zoom move', this.collapse, this);
 			if (!L.Browser.android) {
 				L.DomEvent.on(container, {
 					mouseenter: this.expand,
