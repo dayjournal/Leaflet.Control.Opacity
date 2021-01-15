@@ -1,6 +1,6 @@
 {
   "name": "leaflet.control.opacity",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Leaflet.Control.Opacity is a Leaflet plugin that makes multiple tile layers transparent. (Leaflet v1.x.x)",
   "main": "dist/L.Control.Opacity.js",
   "repository": {
