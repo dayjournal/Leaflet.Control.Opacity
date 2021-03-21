@@ -1,5 +1,5 @@
 /* レンジデザイン設定 */
-input[type="range"] {
+input[type='range'] {
     -webkit-appearance: none;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     width: 110px;
@@ -8,30 +8,30 @@ input[type="range"] {
     border: none;
     padding: 1px 2px;
     border-radius: 30px;
-    background: #F1F0EE;
+    background: #f1f0ee;
     outline: none;
 }
-input[type="range"]::-ms-track {
+input[type='range']::-ms-track {
     border: inherit;
     color: transparent;
     background: transparent;
 }
-input[type="range"]::-ms-fill-lower,
-input[type="range"]::-ms-fill-upper {
+input[type='range']::-ms-fill-lower,
+input[type='range']::-ms-fill-upper {
     background: transparent;
 }
-input[type="range"]::-ms-tooltip {
+input[type='range']::-ms-tooltip {
     display: none;
 }
-input[type="range"]::-ms-thumb {
+input[type='range']::-ms-thumb {
     width: 15px;
     height: 18px;
     border-radius: 12px;
     border: 0;
-    background-image: linear-gradient(to bottom, #1253A4 0, #1253A4 100%);
+    background-image: linear-gradient(to bottom, #1253a4 0, #1253a4 100%);
 }
 
 /* 題名レイアウト */
 .leaflet-control-layers-label {
-    margin: 0px 0px 8px 1px
+    margin: 0px 0px 8px 1px;
 }
