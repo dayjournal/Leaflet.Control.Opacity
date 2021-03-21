@@ -9,8 +9,7 @@ L.Control.Opacity = L.Control.extend({
         this._layerControlInputs = [];
         this._layers = [];
         this._lastZIndex = 0;
-        this._handlingClick = false;
-        for (var i in overlays) {
+        for (const i in overlays) {
             this._addLayer(overlays[i], i, true);
         }
     },
@@ -22,7 +21,7 @@ L.Control.Opacity = L.Control.extend({
     expand: function () {
         L.DomUtil.addClass(this._container, 'leaflet-control-layers-expanded');
         this._form.style.height = null;
-        var acceptableHeight = this._map.getSize().y - (this._container.offsetTop + 50);
+        const acceptableHeight = this._map.getSize().y - (this._container.offsetTop + 50);
         if (acceptableHeight < this._form.clientHeight) {
             L.DomUtil.addClass(this._form, 'leaflet-control-layers-scrollbar');
             this._form.style.height = acceptableHeight + 'px';
@@ -36,18 +35,18 @@ L.Control.Opacity = L.Control.extend({
         return this;
     },
     _initLayout: function () {
-        var className = 'leaflet-control-layers',
+        const className = 'leaflet-control-layers',
             container = (this._container = L.DomUtil.create('div', className)),
             collapsed = this.options.collapsed;
         container.setAttribute('aria-haspopup', true);
         L.DomEvent.disableClickPropagation(container);
         L.DomEvent.disableScrollPropagation(container);
         if (this.options.label) {
-            var labelP = L.DomUtil.create('p', className + '-label');
+            const labelP = L.DomUtil.create('p', className + '-label');
             labelP.innerHTML = this.options.label;
             container.appendChild(labelP);
         }
-        var form = (this._form = L.DomUtil.create('form', className + '-list'));
+        const form = (this._form = L.DomUtil.create('form', className + '-list'));
         if (collapsed) {
             this._map.on('click zoom move', this.collapse, this);
             if (!L.Browser.android) {
@@ -61,7 +60,7 @@ L.Control.Opacity = L.Control.extend({
                 );
             }
         }
-        var link = (this._layersLink = L.DomUtil.create('a', className + '-toggle', container));
+        const link = (this._layersLink = L.DomUtil.create('a', className + '-toggle', container));
         link.href = '#';
         link.title = 'Layers';
         if (L.Browser.touch) {
@@ -79,7 +78,7 @@ L.Control.Opacity = L.Control.extend({
         container.appendChild(form);
     },
     _getLayer: function (id) {
-        for (var i = 0; i < this._layers.length; i++) {
+        for (let i = 0; i < this._layers.length; i++) {
             if (this._layers[i] && L.Util.stamp(this._layers[i].layer) === id) {
                 return this._layers[i];
             }
@@ -99,7 +98,7 @@ L.Control.Opacity = L.Control.extend({
         L.DomUtil.empty(this._baseLayersList);
         L.DomUtil.empty(this._overlaysList);
         this._layerControlInputs = [];
-        var baseLayersPresent,
+        let baseLayersPresent,
             overlaysPresent,
             i,
             obj,
@@ -116,13 +115,13 @@ L.Control.Opacity = L.Control.extend({
             this._baseLayersList.style.display = baseLayersPresent ? '' : 'none';
         }
         this._separator.style.display = overlaysPresent && baseLayersPresent ? '' : 'none';
-        return this;
     },
+    // ラベル・スライダー追加
     _addItem: function (obj) {
-        var label = document.createElement('label'),
-            input;
+        const label = document.createElement('label');
+        const input = document.createElement('input');
         if (obj.overlay) {
-            input = document.createElement('input');
+            // スライドバー追加
             input.type = 'range';
             input.className = 'leaflet-control-layers-range';
             input.min = 0;
@@ -133,39 +132,27 @@ L.Control.Opacity = L.Control.extend({
         }
         this._layerControlInputs.push(input);
         input.layerId = L.Util.stamp(obj.layer);
-        L.DomEvent.on(input, 'click', this._onInputClick, this);
-        L.DomEvent.on(input, 'touchend', this._onInputClick, this);
-        var name = document.createElement('span');
+        // スライドバーイベント
+        input.addEventListener('input', (event) => {
+            const rgValue = event.target.value;
+            const layer = this._getLayer(input.layerId).layer;
+            // 背景ラスタのみ対象
+            if (typeof layer._url === 'undefined') {
+            } else {
+                // 透過度設定
+                layer.setOpacity(Number(rgValue / 100));
+            }
+        });
+        const name = document.createElement('span');
         name.innerHTML = ' ' + obj.name;
-        var holder = document.createElement('div');
-        var holder2 = document.createElement('div');
+        const holder = document.createElement('div');
+        const holder2 = document.createElement('div');
         label.appendChild(holder);
         holder.appendChild(name);
         label.appendChild(holder2);
         holder2.appendChild(input);
-        var container = obj.overlay ? this._overlaysList : this._baseLayersList;
+        const container = obj.overlay ? this._overlaysList : this._baseLayersList;
         container.appendChild(label);
-        return label;
-    },
-    _onInputClick: function () {
-        var inputs = this._layerControlInputs,
-            input,
-            layer;
-
-        this._handlingClick = true;
-
-        for (var i = inputs.length - 1; i >= 0; i--) {
-            input = inputs[i];
-            layer = this._getLayer(input.layerId).layer;
-            if (typeof layer._url === 'undefined') {
-            } else {
-                layer.setOpacity(input.value / 100);
-            }
-        }
-
-        this._handlingClick = false;
-
-        this._refocusOnMap();
     },
 });
 

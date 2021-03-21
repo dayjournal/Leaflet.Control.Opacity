@@ -43,7 +43,7 @@ const Map_BaseLayer = {
 
 //AddLayer
 const Map_AddLayer = {
-    OSM: o_std,
+    'OSM': o_std,
     'GSI Pale': t_pale,
     'GSI Ort': t_ort,
 };
