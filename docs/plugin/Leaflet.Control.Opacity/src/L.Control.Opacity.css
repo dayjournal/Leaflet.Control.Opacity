@@ -1,5 +1,5 @@
 /* レンジデザイン設定 */
-input[type='range'] {
+input.leaflet-control-layers-opacity-range[type='range'] {
     -webkit-appearance: none;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     width: 110px;
@@ -11,19 +11,19 @@ input[type='range'] {
     background: #f1f0ee;
     outline: none;
 }
-input[type='range']::-ms-track {
+input.leaflet-control-layers-opacity-range[type='range']::-ms-track {
     border: inherit;
     color: transparent;
     background: transparent;
 }
-input[type='range']::-ms-fill-lower,
-input[type='range']::-ms-fill-upper {
+input.leaflet-control-layers-opacity-range[type='range']::-ms-fill-lower,
+input.leaflet-control-layers-opacity-range[type='range']::-ms-fill-upper {
     background: transparent;
 }
-input[type='range']::-ms-tooltip {
+input.leaflet-control-layers-opacity-range[type='range']::-ms-tooltip {
     display: none;
 }
-input[type='range']::-ms-thumb {
+input.leaflet-control-layers-opacity-range[type='range']::-ms-thumb {
     width: 15px;
     height: 18px;
     border-radius: 12px;

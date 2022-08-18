@@ -123,7 +123,7 @@ L.Control.Opacity = L.Control.extend({
         if (obj.overlay) {
             // スライドバー追加
             input.type = 'range';
-            input.className = 'leaflet-control-layers-range';
+            input.className = 'leaflet-control-layers-opacity-range';
             input.min = 0;
             input.max = 100;
             input.value = obj.layer.options.opacity * 100;
